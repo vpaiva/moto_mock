@@ -1,6 +1,8 @@
 FROM motoserver/moto:latest
 
 ENV MOTO_PORT=4567
+ENV LOCALSTACK_HOST=localhost:${MOTO_PORT}
+ENV HOSTS=0.0.0.0
 
 # Install mandoc
 RUN  apt-get update && \

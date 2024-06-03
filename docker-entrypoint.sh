@@ -17,7 +17,7 @@ fi
 
 yell "Running moto server"
 
-exec /usr/local/bin/moto_server $MOTO_SERVICE -H 0.0.0.0 --port 4566 &
+exec /usr/local/bin/moto_server $MOTO_SERVICE -H ${HOSTS} --port ${MOTO_PORT} &
 
 yell "Running custom scripts in /moto/init.d/ ..."
 
